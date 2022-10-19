@@ -1,0 +1,16 @@
+<h1>Test technique developeurs</h1>
+<h3>Liste des continents</h3>
+<table>
+	<thead>
+		<tr>
+			<th>Code</th>
+			<th>Nom</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr *ngFor="let continent of continents">
+			<td data-label="Projeto">{{continent.code}}</td>
+			<td data-label="Descrição">{{continent.name}}</td>
+		</tr>
+	</tbody>
+</table>
