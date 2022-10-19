@@ -18,6 +18,22 @@ table {
 	table-layout: fixed;
 }
 
+.search-button{
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    margin-bottom: 15px;
+}
+
+.search-button button{
+    border: none;
+    background-color: #c41323;
+    color: #fff;
+    padding: 7px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
 table caption {
 	margin: 1rem 0;
 	color: slategray;

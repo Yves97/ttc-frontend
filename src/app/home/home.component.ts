@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { Continents } from '../dataTypes/contients';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -10,7 +11,7 @@ import { Continents } from '../dataTypes/contients';
 })
 export class HomeComponent implements OnInit {
 
-  constructor(private http: HttpClient) {  }
+  constructor(private http: HttpClient, private router: Router) {  }
 
   continents: Continents[] = [];
 
@@ -25,7 +26,10 @@ export class HomeComponent implements OnInit {
         .subscribe((continents: any) => {
           this.continents = continents
         })
-   
-  } 
+  }
+  
+  goToSearch(){
+    return this.router.navigate(['/continents']); 
+  }
 
 }

@@ -1,1 +1,37 @@
-<p>continents works!</p>
+<h1>Test technique developeurs</h1>
+<h3>Recherche</h3>
+<div class="search-button">
+    <button (click)="goToHome()">Accueil</button>
+</div>
+<div class="container-select">
+    <form  [formGroup]="codeForm" (ngSubmit)="onSubmitCode()">
+        <div class="input-group">
+            <input id="code" type="text" formControlName="code" value="code" placeholder="rechercher par le code">
+            <button type="submit">Rechercher</button>
+        </div>
+    </form>
+    <form [formGroup]="nameForm" (ngSubmit)="onSubmitName()" >
+        <div class="input-group">
+            <input type="text" formControlName="name" value="name" placeholder="rechercher par le nom">
+            <button>Rechercher</button>
+        </div>
+    </form>
+</div>
+
+<table>
+	<thead>
+		<tr>
+			<th>Code</th>
+			<th>Nom</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td data-label="Projeto">{{continent.code}}</td>
+			<td data-label="Descrição">{{continent.name}}</td>
+		</tr>
+	</tbody>
+</table>
+
+
+
